@@ -33,16 +33,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Products()
-    { 
-        var products = new List<Product>
-        {
-            new Product { Name = "Яйца", Price = 4.50m },
-            new Product { Name = "Месо", Price = 12.00m },
-            new Product { Name = "Месо", Price = 12.00m }
-        };
-
-        return View(products);
+    public IActionResult Categories()
+    {
+        var categories = new List<string> { "Яйца", "Мляко", "Месо", "Зеленчуци" };
+        return View(categories);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
