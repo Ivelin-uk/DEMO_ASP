@@ -1,0 +1,10 @@
+@model List<Product>
+
+<h2>Списък с продукти</h2>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name - @product.Price лв.</li>
+    }
+</ul>
